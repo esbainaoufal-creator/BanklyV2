@@ -20,3 +20,17 @@ CREATE TABLE IF NOT EXISTS clients (
     utilisateur_id INT NOT NULL,
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id)
 );
+
+--@block
+CREATE TABLE IF NOT EXISTS comptes (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    account_number VARCHAR(14) UNIQUE NOT NULL,
+    account_type ENUM('Courant' , 'Epargne' , 'Professionnel' , 'Jeune') NOT NULL,
+    solde DECIMAL(12,2) NOT NULL,
+    account_statue ENUM('Actif' , 'Inactif' , 'Blocked') NOT NULL,
+    creation_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    utilisateur_id INT NOT NULL,
+    client_id INT NOT NULL,
+    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
+    FOREIGN KEY (client_id) REFERENCES clients(id)
+);
