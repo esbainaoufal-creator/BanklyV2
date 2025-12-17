@@ -34,3 +34,14 @@ CREATE TABLE IF NOT EXISTS comptes (
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
     FOREIGN KEY (client_id) REFERENCES clients(id)
 );
+
+--@block
+CREATE TABLE IF NOT EXISTS transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    transaction_type ENUM('Depot' , 'Retrait') NOT NULL,
+    amout DECIMAL(12,2) NOT NULL,
+    transaction_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    description VARCHAR(100),
+    account_id INT NOT NULL,
+    FOREIGN KEY (account_id) REFERENCES comptes(id)
+);
