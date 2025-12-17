@@ -6,3 +6,17 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     role ENUM('Controleur' , 'Adminasteur' , 'Client') NOT NULL
 );
 
+--@block
+CREATE TABLE IF NOT EXISTS clients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(32) NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    phone_number VARCHAR(10) UNIQUE NOT NULL,
+    creation_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    adresse VARCHAR(100) NOT NULL,
+    cin VARCHAR(10) UNIQUE NOT NULL,
+    gendre ENUM('Homme' , 'Femme') NOT NULL,
+    birthday DATE NOT NULL,
+    utilisateur_id INT NOT NULL,
+    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id)
+);
