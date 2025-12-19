@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: burlywood;
+    margin: 0;
+    
+}
+
+a {
+text-decoration: none;
+color:black;
+border: #1e88e5;
+}
+.login-box {
+    width: 350px;
+    margin: 120px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #1e88e5;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+header {
+    background: #1e88e5;
+    color: white;
+    padding: 15px;
+
+}
+
+header a {
+    color: white;
+    float: right;
+    text-decoration: none;
+    margin : 1em auto;
+}
+
+.container {
+    padding: 20px;
+    
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.card {
+    background: rgb(122, 12, 12);
+    padding: 20px;
+    border-radius: 6px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: aliceblue;
+    
+}
+.table {
+   background: rgb(122, 12, 12);    
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    border: #e9818b;
+
+}
+
+.card a {
+    color: bisque;
+}
+:hover .card a {
+    color: rgb(195, 190, 185);
+}
+.button {
+    width: 10em;
+    background-color: aliceblue;
+    height: 2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    text-align: center;
+}
+.button2 a{
+    color: grey;
+    margin-bottom: 1em;
+}
